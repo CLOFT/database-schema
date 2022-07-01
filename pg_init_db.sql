@@ -1,13 +1,13 @@
 -- DROP TABLE IF EXISTS <TABLE NAME>;
-DROP TABLE IF EXISTS "CognitoUsers";
-DROP TABLE IF EXISTS "UsersSecureContacts";
-DROP TABLE IF EXISTS "DailyAnalyses";
-DROP TABLE IF EXISTS "Bracelets";
-DROP TABLE IF EXISTS "Alarms";
+-- DROP TABLE IF EXISTS "CognitoUsers";
+-- DROP TABLE IF EXISTS "UsersSecureContacts";
+-- DROP TABLE IF EXISTS "DailyAnalyses";
+-- DROP TABLE IF EXISTS "Bracelets";
+-- DROP TABLE IF EXISTS "Alarms";
 
 -- Cognito Users Username
 CREATE TABLE "CognitoUsers"(
-    "Username" varchar(256) PRIMARY KEY;
+    "Username" varchar(256) PRIMARY KEY
 );
 -- Users Secure Contacts Emails
 CREATE TABLE "UsersSecureContacts"(
