@@ -25,7 +25,7 @@ CREATE TABLE "DailyAnalyses"(
 -- Bracelets 
 CREATE TABLE "Bracelets" (
     "SerialNumber" uuid PRIMARY KEY,
-    "Username" varchar(256) references "Users" ("Username"),
+    "Username" varchar(256) references "Users" ("Username") ON DELETE CASCADE ON UPDATE CASCADE,
     "Color" varchar(64) NOT NULL,
     "Serendipity" decimal
 );
