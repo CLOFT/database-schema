@@ -1,18 +1,18 @@
 -- DROP TABLE IF EXISTS <TABLE NAME>;
--- DROP TABLE IF EXISTS "CognitoUsers";
+-- DROP TABLE IF EXISTS "Users";
 -- DROP TABLE IF EXISTS "UsersSecureContacts";
 -- DROP TABLE IF EXISTS "DailyAnalyses";
 -- DROP TABLE IF EXISTS "Bracelets";
 -- DROP TABLE IF EXISTS "Alarms";
 
--- Cognito Users Username
-CREATE TABLE "CognitoUsers"(
+-- Users
+CREATE TABLE "Users"(
     "Username" varchar(256) PRIMARY KEY
 );
 -- Users Secure Contacts Emails
 CREATE TABLE "UsersSecureContacts"(
     "Id" uuid PRIMARY KEY,
-    "Username" varchar (256) references "CognitoUsers" ("Username") NOT NULL,
+    "Username" varchar (256) references "Users" ("Username") NOT NULL,
     "ContactEmail" varchar(256)  NOT NULL
 );
 -- Daily Analyses
@@ -25,7 +25,7 @@ CREATE TABLE "DailyAnalyses"(
 -- Bracelets 
 CREATE TABLE "Bracelets" (
     "SerialNumber" uuid PRIMARY KEY,
-    "Username" varchar(256) references "CognitoUsers" ("Username"),
+    "Username" varchar(256) references "Users" ("Username"),
     "Color" varchar(64) NOT NULL,
     "Serendipity" decimal
 );
