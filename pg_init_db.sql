@@ -1,13 +1,14 @@
 -- DROP TABLE IF EXISTS <TABLE NAME>;
--- DROP TABLE IF EXISTS "Users";
--- DROP TABLE IF EXISTS "UsersSecureContacts";
--- DROP TABLE IF EXISTS "DailyAnalyses";
--- DROP TABLE IF EXISTS "Bracelets";
--- DROP TABLE IF EXISTS "Alarms";
+-- DROP TABLE IF EXISTS "Users" CASCADE;
+-- DROP TABLE IF EXISTS "UsersSecureContacts" CASCADE;
+-- DROP TABLE IF EXISTS "DailyAnalyses" CASCADE;
+-- DROP TABLE IF EXISTS "Bracelets" CASCADE;
+-- DROP TABLE IF EXISTS "Alarms" CASCADE;
 
 -- Users
 CREATE TABLE "Users"(
-    "Username" varchar(256) PRIMARY KEY
+    "Username" varchar(256) PRIMARY KEY,
+    "Role" varchar(64) NOT NULL
 );
 -- Users Secure Contacts Emails
 CREATE TABLE "UsersSecureContacts"(
