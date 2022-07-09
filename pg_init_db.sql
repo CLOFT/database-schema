@@ -1,7 +1,6 @@
--- DROP TABLE IF EXISTS <TABLE NAME>;
+-- DROP TABLE IF EXISTS <TABLE NAME> CASCADE;
 -- DROP TABLE IF EXISTS "Users" CASCADE;
 -- DROP TABLE IF EXISTS "UsersSecureContacts" CASCADE;
--- DROP TABLE IF EXISTS "DailyAnalyses" CASCADE;
 -- DROP TABLE IF EXISTS "Bracelets" CASCADE;
 -- DROP TABLE IF EXISTS "Alarms" CASCADE;
 
@@ -16,13 +15,7 @@ CREATE TABLE "UsersSecureContacts"(
     "Username" varchar (256) references "Users" ("Username") NOT NULL,
     "ContactEmail" varchar(256)  NOT NULL
 );
--- Daily Analyses
-CREATE TABLE "DailyAnalyses"(
-    "Id" uuid PRIMARY KEY,
-    "BraceletsCount" int DEFAULT 0,
-    "UsersCount" integer DEFAULT 0,
-    "AdminCount" integer DEFAULT 0
-);
+
 -- Bracelets 
 CREATE TABLE "Bracelets" (
     "SerialNumber" uuid PRIMARY KEY,
