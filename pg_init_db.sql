@@ -7,8 +7,10 @@
 -- Users
 CREATE TABLE "Users"(
     "Username" varchar(256) PRIMARY KEY,
-    "Role" varchar(64) NOT NULL
+    "Role" varchar(64) NOT NULL,
+    "Birth" date NOT NULL 
 );
+
 -- Users Secure Contacts Emails
 CREATE TABLE "UsersSecureContacts"(
     "Id" uuid PRIMARY KEY,
